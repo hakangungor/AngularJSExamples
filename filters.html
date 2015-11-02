@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<title>AngularJS - First Example</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<script src="js/angular.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h3>*************para birimi ekleme (currency)*********************</h3>
+
+<!--Sadece sayisal deger giriyoruz-->
+
+<input type="text" ng-model="miktar"></input>
+<h3>{{miktar | currency:"TL"}}</h3>
+
+
+<!--*sadece sayisal deger giriyoruz ve ng-intit ile ilk degeri ni atiyoruz-->
+
+<input type="text" ng-model="miktar2" ng-init="miktar2=123"></input>
+<h3>{{miktar2 | currency}}</h3>
+
+<!--Sadece sayisal deger giriyoruz. Virgulden sonra 2 haneli 0 rakamlari koyacak. Kuruslar yani-->
+
+<input type="text" ng-model="miktar3"></input>
+<h3>{{miktar3 | currency:"TL":2}}</h3>
+
+<!--Tarih ve saat formatlari-->
+
+<h3>*************Tarih Saat Işlemleri*********************</h3>
+
+<input type="text" ng-model="tarih" ng-init="tarih=1924343623046"></input>
+<h3>{{tarih | date}} - date</h3>
+<h3>{{tarih | date: 'medium'}} - medium</h3>
+<h3>{{tarih | date: 'short'}} - short</h3>
+<h3>{{tarih | date: 'fulldate'}} - fulldate</h3>
+<h3>{{tarih | date: 'yyyy'}} - sadece yil</h3>
+<h3>{{tarih | date: 'yy'}} - sadece ay</h3>
+<h3>{{tarih | date: 'y'}} - sadece gun</h3>
+<h3>{{tarih | date: 'yyyy'}} - sadece saniye</h3>
+
+<!--uppercase ve lowercase-->
+<h3>***********uppercase ve lowercase*********</h3>
+
+<input ng-model="yaziboyutlandirma" type="text"></input>
+<h3>{{yaziboyutlandirma | uppercase}}</h3>
+<h3>{{yaziboyutlandirma | lowercase}}</h3>
+
+
+
+
+</body>
+</html>
